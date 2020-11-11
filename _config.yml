@@ -4,13 +4,13 @@ url: "https://20-2-SKKU-OSS.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
 title: 2020-2-OSS-2                                    # site's title
-description: "Team Page for Our Project!"      # used by search engines
+description: "Team Page for Conora-cli Project!"      # used by search engines
 avatar: assets/img/triangle.png                         # Empty for no avatar in navbar
 favicon: assets/favicon.ico                             # Icon displayed in the tab
 
 # Header and footer text
-header_text: 2조  # Change Blog header text
-header_feature_image: assets/img/pexels/triangular.jpeg
+header_text: 2조 정적 페이지  # Change Blog header text
+header_feature_image: assets/img/pexels/library.jpg
 footer_text: >
   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 

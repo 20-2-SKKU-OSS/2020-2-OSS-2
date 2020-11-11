@@ -1,5 +1,5 @@
 # Icons on the footer
-rss: true
+rss: false
 email_address:    # Full email address, e.g. "sam@example.com"
 behance:
 bitbucket:
@@ -7,7 +7,7 @@ dribbble:
 facebook:
 flickr:
 gitlab:
-github: "sylhare"
+github: "20-2-SKKU-OSS/2020-2-OSS-2"
 instagram:
 keybase:
 linkedin:         # Full URL
