@@ -1,7 +1,7 @@
 ---
 layout: post
 title: corona-cli 소개
-tags: [corona-cli]
+tags: [corona-cli, Archive]
 excerpt_separator: <!--more-->
 author:
 feature-img: "assets/img/corona-cli-logo.jpg"
