@@ -13,9 +13,9 @@ tags: [About, Archive]
 양현동 | https://github.com/Yanghyeondong
 이현재 | https://github.com/dlguswo333
 전윤태 | https://github.com/JEONYUNTAE
-정재윤 | https://github.com/jung-jae-yoon
+ | 
 
 First Header  | Second Header
 ------------- | -------------
 Content Cell  | Content Cell
-Content Cell  | Content Cell
+정재윤  | https://github.com/jung-jae-yoon
