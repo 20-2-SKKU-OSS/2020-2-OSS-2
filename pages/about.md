@@ -10,8 +10,8 @@ tags: [About, Archive]
 
 팀원  | Github Link
 ------------- | -------------
-신원철 | ?
-양현동 | https://github.com/Yanghyeondong
-이현재 | https://github.com/dlguswo333
-전윤태 | https://github.com/JEONYUNTAE
-정재윤  | https://github.com/jung-jae-yoon
+신원철 | <https://github.com/Wonchul-Shin>
+양현동 | <https://github.com/Yanghyeondong>
+이현재 | <https://github.com/dlguswo333>
+전윤태 | <https://github.com/JEONYUNTAE>
+정재윤  | <https://github.com/jung-jae-yoon>
