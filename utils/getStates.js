@@ -50,6 +50,20 @@ module.exports = async (
 		if (!json) {
 			spinner.info(`${cyan(`Sorted by:`)} ${sortBy}${isRev}`);
 		}
+		
+		const csvWriter = createCsvWriter({
+			path: 'output/chart.csv',
+			header: [
+			  {id: 'state', title: 'State'},
+			  {id: 'cases', title: 'Cases'},
+			  {id: 'todayCases', title: 'Cases (today)'},
+			  {id: 'deaths', title: 'Deaths'},
+			  {id: 'todayDeaths', title: 'Deaths (today)'},
+			  {id: 'active', title: 'Active'},
+			]
+		});
+
+		csvWriter.writeRecords(allStates);
 		console.log(output.toString());
 	}
 };
