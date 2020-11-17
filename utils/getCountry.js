@@ -37,6 +37,7 @@ module.exports = async (spinner, table, states, countryName, options) => {
 		const csvWriter = createCsvWriter({
 			path: 'output/country_chart.csv',
 			header: [
+			  {id: 'country', title: 'Country'},
 			  {id: 'cases', title: 'Cases'},
 			  {id: 'todayCases', title: 'TodayCases'},
 			  {id: 'deaths', title: 'Deaths'},
