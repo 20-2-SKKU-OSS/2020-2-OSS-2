@@ -3,6 +3,7 @@ const numberFormat = require('./numberFormat');
 const exitCountry = require('./exitCountry');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
+const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 module.exports = async (spinner, table, states, countryName, options) => {
 	if (countryName && !states && !options.chart) {
@@ -30,6 +31,24 @@ module.exports = async (spinner, table, states, countryName, options) => {
 			format(thisCountry.casesPerOneMillion)
 		]);
 		spinner.stopAndPersist();
+		
+		// 파일명 country_chart를 thisCountry.country로 받아온 변수로 수정할 계획
+		
+		const csvWriter = createCsvWriter({
+			path: 'output/country_chart.csv',
+			header: [
+			  {id: 'cases', title: 'Cases'},
+			  {id: 'todayCases', title: 'TodayCases'},
+			  {id: 'deaths', title: 'Deaths'},
+			  {id: 'todayDeaths', title: 'Deaths (today)'},
+			  {id: 'recovered', title: 'Recovered'},
+			  {id: 'active', title: 'Active'},
+			  {id: 'critical', title: 'Critical'},
+			  {id: 'casesPerOneMillion', title: 'CasesPerOneMillion'},
+			]
+		});
+
+		csvWriter.writeRecords(thisCountry);
 		console.log(table.toString());
 	}
 };
