@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: /2020-2-OSS-2
+baseurl: "/2020-2-OSS-2"
 url: "https://20-2-SKKU-OSS.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
