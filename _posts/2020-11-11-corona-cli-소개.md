@@ -7,13 +7,9 @@ author:
 feature-img: "assets/img/corona-cli-logo.jpg"
 ---
 
-corona-cli
-
-는 각국의 확진자 수를 검색하는 기능을 제공하는 등 굉장하고 많은 기능을 제공하는 MIT License의 오픈소스 소프트웨어입니다.
-
 # corona-cli  
-
 Github link: <https://github.com/ahmadawais/corona-cli>
+**corona-cli**는 2020년 전세계적으로 큰 영향력을 끼치고 있는 코로나 바이러스 (COVID-19)의 현황을 믿을 수 있는 보건 기구의 통계를 통해 표나 그래프의 형태로 제공합니다.
 
 {% include aligner.html images="corona-table.jpg,corona-bar-chart.jpg" %}
 
