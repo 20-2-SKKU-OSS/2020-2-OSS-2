@@ -1,0 +1,20 @@
+
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug corona-cli",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": ["<node_internals>/**"],
+			"program": "${workspaceFolder}/index.js",
+/* 			"args": [
+				"states",
+				"--bar",
+				"buildOutput/JavaScript1.js",
+				"--sort",
+				"per-million"
+			]
+ */		}
+	]
+}
