@@ -8,13 +8,9 @@
 			"request": "launch",
 			"skipFiles": ["<node_internals>/**"],
 			"program": "${workspaceFolder}/index.js",
-/* 			"args": [
-				"states",
-				"--bar",
-				"buildOutput/JavaScript1.js",
-				"--sort",
-				"per-million"
+			"args": [
+				
 			]
- */		}
+		}
 	]
 }

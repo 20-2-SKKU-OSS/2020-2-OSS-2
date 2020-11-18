@@ -30,7 +30,7 @@ const {
 } = require('./utils/table.js');
 
 // Cli.
-const [input] = cli.input;
+const input = cli.input;
 const xcolor = cli.flags.xcolor;
 const sortBy = cli.flags.sort;
 const reverse = cli.flags.reverse;
@@ -46,9 +46,9 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
 	// Init.
 	await init(minimal || json);
 	const spinner = ora({ text: '' });
-	input === 'help' && (await cli.showHelp(0));
-	const states = input === 'states' ? true : false;
-	const country = states ? '' : input;
+	input[0] === 'help' && (await cli.showHelp(0));
+	const states = input[0] === 'states' ? true : false;
+	const countryList = (states ? '' : input);
 
 	// Table
 	const head = xcolor ? single : colored;
@@ -62,11 +62,11 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
 	// Display data.
 	spinner.start();
 	const lastUpdated = await getWorldwide(output, states, json);
-	await getCountry(spinner, output, states, country, options);
+	await getCountry(spinner, output, states, countryList, options);
 	await getStates(spinner, output, states, options);
-	await getCountries(spinner, output, states, country, options);
-	await getCountryChart(spinner, country, options);
-	await getBar(spinner, country, states, options);
+	await getCountries(spinner, output, states, countryList[0], options);
+	await getCountryChart(spinner, countryList, options);
+	await getBar(spinner, countryList, states, options);
 
 	theEnd(lastUpdated, states, minimal || json);
 })();
