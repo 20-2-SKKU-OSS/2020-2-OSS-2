@@ -51,7 +51,12 @@ module.exports = async (
 			spinner.info(`${cyan(`Sorted by:`)} ${sortBy}${isRev}`);
 		}
 		
-		console.log('1step');
+		var fs=require('fs');
+
+		if (!fs.existsSync('./output')){
+			fs.mkdirSync('./output');
+		}
+		
 
 		const csvWriter = createCsvWriter({
 			path: 'output/chart.csv',
@@ -65,12 +70,7 @@ module.exports = async (
 			]
 		});
 
-		console.log(allStates);
-
-		csvWriter.writeRecords(allStates)       // returns a promise
-    			.then(() => {
-        			console.log('...Done');
-    			});
+		csvWriter.writeRecords(allStates);
 		console.log(output.toString());
 	}
 };
