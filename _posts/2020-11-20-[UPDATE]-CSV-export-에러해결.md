@@ -3,7 +3,7 @@ layout: post
 title: "[UPDATE] CSV export 에러해결"
 tags: [corona-cli, Archive, UPDATE]
 excerpt_separator: <!--more-->
-author: JEONYUNTAE
+author: jyt
 feature-img: 
 ---
 
