@@ -51,6 +51,8 @@ module.exports = async (
 			spinner.info(`${cyan(`Sorted by:`)} ${sortBy}${isRev}`);
 		}
 		
+		console.log('1step');
+
 		const csvWriter = createCsvWriter({
 			path: 'output/chart.csv',
 			header: [
@@ -63,7 +65,12 @@ module.exports = async (
 			]
 		});
 
-		csvWriter.writeRecords(allStates);
+		console.log(allStates);
+
+		csvWriter.writeRecords(allStates)       // returns a promise
+    			.then(() => {
+        			console.log('...Done');
+    			});
 		console.log(output.toString());
 	}
 };
