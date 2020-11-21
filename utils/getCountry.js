@@ -34,8 +34,16 @@ module.exports = async (spinner, table, states, countryName, options) => {
 		
 		// 파일명 country_chart를 thisCountry.country로 받아온 변수로 수정할 계획
 		
+		var fs=require('fs');
+
+		if (!fs.existsSync('./output')){
+			fs.mkdirSync('./output');
+		}
+		
+		var path_ =  'output/'+thisCountry.country+'_chart.csv';
+		
 		const csvWriter = createCsvWriter({
-			path: 'output/country_chart.csv',
+			path: path_,
 			header: [
 			  {id: 'country', title: 'Country'},
 			  {id: 'cases', title: 'Cases'},
