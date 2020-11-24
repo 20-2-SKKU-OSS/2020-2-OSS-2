@@ -40,7 +40,6 @@ module.exports = async (spinner, table, states, countryName, options) => {
 			fs.mkdirSync('./output');
 		}
 
-		console.log(thisCountry);
 		
 		var path_ =  'output/'+thisCountry.country+'.csv';
 		
