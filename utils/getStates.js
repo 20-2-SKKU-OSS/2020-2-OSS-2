@@ -50,6 +50,7 @@ module.exports = async (
 		if (!json) {
 			spinner.info(`${cyan(`Sorted by:`)} ${sortBy}${isRev}`);
 		}
+
 		
 		var fs=require('fs');
 
