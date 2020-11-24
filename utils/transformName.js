@@ -1,6 +1,8 @@
 
 module.exports = async (countryName) => {
 
+    //Sources of all country names are referenced at "en.wikipedia.org".
+
     //S. korea
     if(countryName == "korea" || countryName == "Korea" || countryName == "S.Korea" || countryName == "Korea, Republic of" || countryName == "ROK" || 
        countryName == "southkorea" || countryName == "SouthKorea" || countryName == "Hanguk" || countryName == "hanguk"){
@@ -11,12 +13,11 @@ module.exports = async (countryName) => {
     //USA
     else if(countryName == "UnitedStates" || countryName == "U.S." || countryName == "UnitedStatesofAmerica"){
 
-        return "usa";
+        return "USA";
     }
 
     //China
-    //PRC = People's Republic of China
-    else if(countryName == "PRC" || countryName == "People's Republic of China" || countryName == "People'sRepublicofChina"){
+    else if(countryName == "PRC" || countryName == "People's Republic of China" ){
 
         return "China";
     }
@@ -46,7 +47,6 @@ module.exports = async (countryName) => {
     }
 
     else {
-
         return countryName;
     }
 }
