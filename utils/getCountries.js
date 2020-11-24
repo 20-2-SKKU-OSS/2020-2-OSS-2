@@ -6,7 +6,6 @@ const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 const orderBy = require('lodash.orderby');
 const sortValidation = require('./sortValidation.js');
-const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 module.exports = async (
 	spinner,
@@ -59,32 +58,6 @@ module.exports = async (
 			spinner.info(`${cyan(`Sorted by:`)} ${sortBy}${isRev}`);
 		}
 		
-		// 파일명 country_chart를 thisCountry.country로 받아온 변수로 수정할 계획
-		
-		var fs=require('fs');
-
-		if (!fs.existsSync('./output')){
-			fs.mkdirSync('./output');
-		}
-		
-		var path_ =  'output/'+thisCountry.country+'_chart.csv';
-		
-		const csvWriter = createCsvWriter({
-			path: path_,
-			header: [
-			  {id: 'country', title: 'Country'},
-			  {id: 'cases', title: 'Cases'},
-			  {id: 'todayCases', title: 'TodayCases'},
-			  {id: 'deaths', title: 'Deaths'},
-			  {id: 'todayDeaths', title: 'Deaths (today)'},
-			  {id: 'recovered', title: 'Recovered'},
-			  {id: 'active', title: 'Active'},
-			  {id: 'critical', title: 'Critical'},
-			  {id: 'casesPerOneMillion', title: 'CasesPerOneMillion'},
-			]
-		});
-
-		csvWriter.writeRecords(oneCountry);
 		console.log(output.toString());
 	}
 };
