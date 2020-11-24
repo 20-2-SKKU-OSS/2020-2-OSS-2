@@ -59,7 +59,7 @@ module.exports = async (
 		
 
 		const csvWriter = createCsvWriter({
-			path: 'output/chart.csv',
+			path: 'output/US_states.csv',
 			header: [
 			  {id: 'state', title: 'State'},
 			  {id: 'cases', title: 'Cases'},
