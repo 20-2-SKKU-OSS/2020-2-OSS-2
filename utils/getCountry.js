@@ -3,6 +3,7 @@ const numberFormat = require('./numberFormat');
 const exitCountry = require('./exitCountry');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
+const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 module.exports = async (spinner, table, states, countryList, options) => {
 	if (countryList && !states && !options.chart) {
