@@ -27,8 +27,26 @@ module.exports = async (countryName) => {
         return "Japan";
     }
 
+    //Russia
+    else if(countryName == "RussianFederation" || countryName == "Rossiyskaya Federatsiya" ){
+
+        return "Russia";
+    }
+
+    //United Kingdom
+    else if(countryName == "U.K." || countryName == "Britain" || countryName == "United Kingdom of Great Britain and Northern Ireland"){
+
+        return "United Kingdom";
+    }
+    
+    //Germany
+    else if(countryName == "Federal Republic of Germany" || countryName == "Deutschland" ){
+
+        return "Germany";
+    }
 
     else {
+
         return countryName;
     }
 }
