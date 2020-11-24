@@ -3,11 +3,13 @@ const numberFormat = require('./numberFormat');
 const exitCountry = require('./exitCountry');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
+const transformName = require('./transformName.js');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 module.exports = async (spinner, table, states, countryList, options) => {
 	if (countryList && !states && !options.chart) {
 		for(let i=0;i<countryList.length;++i){
+			countryList[i] = await transformName(countryList[i]);
 			const [err, response] = await to(
 				axios.get(`https://corona.lmao.ninja/v2/countries/${countryList[i]}`)
 			);
