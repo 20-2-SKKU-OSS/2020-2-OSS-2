@@ -39,6 +39,7 @@ module.exports = meow(
 	  ${yellow(`Recovered`)}: Total number of recovered patients
 	  ${yellow(`Active`)}: Total number of active patients
 	  ${yellow(`Critical`)}: Total number of critical patients
+	  ${yellow(`Per Million`)}: Affected patients per million
 
 	❯ You can also run command + option at once:
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`-x`)} ${yellow(`-s cases`)}
