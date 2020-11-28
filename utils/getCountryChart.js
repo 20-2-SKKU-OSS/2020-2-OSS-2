@@ -5,9 +5,11 @@ const to = require('await-to-js').default;
 const moment = require('moment');
 const blessed = require('blessed');
 const contrib = require('blessed-contrib');
+const transformName = require('./transformName.js');
 
 module.exports = async (spinner, countryName, { chart, log }) => {
 	if (countryName && chart) {
+		countryName = await transformName(countryName);
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/v2/historical/${countryName}`)
 		);

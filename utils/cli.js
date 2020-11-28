@@ -22,13 +22,24 @@ module.exports = meow(
 	  ${yellow(`-j`)}, ${yellow(`--json`)}      Output JSON only data
 
 	Examples
-	  ${green(`corona`)} ${cyan(`china`)}
-	  ${green(`corona`)} ${cyan(`states`)}
-	  ${green(`corona`)} ${yellow(`--bar`)}
-	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)}
-	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)} ${yellow(`--log`)}
-	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}
-	  ${green(`corona`)} ${yellow(`-s`)} ${cyan(`critical`)}
+	  ${green(`corona`)} ${cyan(`china`)}		Print data of ${cyan(`china`)}
+	  ${green(`corona`)} ${cyan(`states`)}		Print data of all ${cyan(`states`)}
+	  ${green(`corona`)} ${yellow(`--bar`)}		Print stats in ${yellow(`bar`)} charts
+	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)}	Print chart for ${cyan(`china`)}
+	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)} ${yellow(`--log`)}	Print ${yellow(`log`)} chart for ${cyan(`china`)}
+	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}	Print ${yellow(`sorted`)} data by ${cyan(`cases-today`)}
+	  ${green(`corona`)} ${yellow(`-s`)} ${cyan(`critical`)}		Print ${yellow(`sorted`)} data by ${cyan(`critical`)}
+
+	Sort Key
+	  ${yellow(`Country`)}: Name of the country
+	  ${yellow(`Cases`)}: Total number of cases in a country
+	  ${yellow(`Cases (today)`)}: Cases in 24 hours GMT/UTC
+	  ${yellow(`Deaths`)}: Total number of deaths in a country
+	  ${yellow(`Deaths (today)`)}: Deaths in 24 hours GMT/UTC
+	  ${yellow(`Recovered`)}: Total number of recovered patients
+	  ${yellow(`Active`)}: Total number of active patients
+	  ${yellow(`Critical`)}: Total number of critical patients
+	  ${yellow(`Per Million`)}: Affected patients per million
 
 	❯ You can also run command + option at once:
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`-x`)} ${yellow(`-s cases`)}
