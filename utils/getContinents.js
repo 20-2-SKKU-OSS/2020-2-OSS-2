@@ -12,43 +12,40 @@ module.exports = async (
 	output,
 	states,
 	countryName,
-	{ sortBy, limit, reverse, bar, json, continent }
+	{ sortBy, reverse, bar, json, continent }
 ) => {
-	if (!countryName && !states && !bar && !continent) {
+	if (!countryName && !states && !bar && continent) {
 		sortValidation(sortBy, spinner);
 		const [err, response] = await to(
-			axios.get(`https://corona.lmao.ninja/v2/countries`)
+			axios.get(`https://disease.sh/v3/covid-19/continents`)
 		);
 		handleError(`API is down, try again later.`, err, false);
-		let allCountries = response.data;
+		let allContinents = response.data;
 
 		// Format.
 		const format = numberFormat(json);
 
 		// Sort & reverse.
 		const direction = reverse ? 'asc' : 'desc';
-		allCountries = orderBy(
-			allCountries,
+		allContinents = orderBy(
+			allContinents,
 			[sortingKeys[sortBy]],
 			[direction]
 		);
 
-		// Limit.
-		allCountries = allCountries.slice(0, limit);
-
 		// Push selected data.
-		allCountries.map((oneCountry, count) => {
+		allContinents.map((oneContinent, count) => {
 			output.push([
 				count + 1,
-				oneCountry.country,
-				format(oneCountry.cases),
-				format(oneCountry.todayCases),
-				format(oneCountry.deaths),
-				format(oneCountry.todayDeaths),
-				format(oneCountry.recovered),
-				format(oneCountry.active),
-				format(oneCountry.critical),
-				format(oneCountry.casesPerOneMillion)
+				oneContinent.continent,
+				format(oneContinent.cases),
+				format(oneContinent.todayCases),
+				format(oneContinent.deaths),
+				format(oneContinent.todayDeaths),
+				format(oneContinent.recovered),
+				format(oneContinent.active),
+				format(oneContinent.critical),
+				format(oneContinent.casesPerOneMillion)
 			]);
 		});
 

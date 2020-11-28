@@ -5,7 +5,7 @@ const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 
 module.exports = async (spinner, table, states, countryList, options) => {
-	if (countryList && !states && !options.chart) {
+	if (countryList && !states && !options.chart && !options.continent) {
 		for(let i=0;i<countryList.length;++i){
 			const [err, response] = await to(
 				axios.get(`https://corona.lmao.ninja/v2/countries/${countryList[i]}`)
