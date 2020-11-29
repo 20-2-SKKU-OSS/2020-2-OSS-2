@@ -70,31 +70,19 @@ module.exports = {
 	},
 	sortingKeys: {
 		country: 'country',
-		ca: 'cases' ,
 		cases: 'cases',
 		'cases-today': 'todayCases',
-		'ca-t':'todayCases',
 		deaths: 'deaths',
-		d: 'deaths',
 		'deaths-today': 'todayDeaths',
-		'd-t': 'todayDeaths',
 		recovered: 'recovered',
-		r: 'recovered',
-		a: 'active',
 		active: 'active',
 		critical: 'critical',
-		c: 'critical',
-		'per-million': 'casesPerOneMillion',
-		'p-m': 'casesPerOneMillion',
-		
-		
+		'per-million': 'casesPerOneMillion'
 	},
 	sortingStateKeys: {
 		state: 'state',
 		cases: 'cases',
-		ca: 'cases',
 		'cases-today': 'todayCases',
-		d: 'deaths',
 		deaths: 'deaths',
 		'deaths-today': 'todayDeaths',
 		active: 'active'
