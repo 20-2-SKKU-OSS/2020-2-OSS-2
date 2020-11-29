@@ -6,6 +6,7 @@ const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 const orderBy = require('lodash.orderby');
 const sortValidation = require('./sortValidation.js');
+const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 module.exports = async (
 	spinner,
