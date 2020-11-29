@@ -20,8 +20,9 @@ module.exports = meow(
 	  ${yellow(`-x`)}, ${yellow(`--xcolor`)}    Single colored output
 	  ${yellow(`-m`)}, ${yellow(`--minimal`)}   Minimalistic CLI output
 	  ${yellow(`-j`)}, ${yellow(`--json`)}      Output JSON only data
-	  ${yellow(`--continent`)}     Print continental data
-	  ${yellow(`--danger`)}     Print dangerous countries
+	  ${yellow(`--continent`)}                  Print continental data
+	  ${yellow(`--danger`)}                     Print dangerous countries
+	  ${yellow(`--csv`)}                        CSV-file export
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}		Print data of ${cyan(`china`)}
@@ -29,6 +30,7 @@ module.exports = meow(
 	  ${green(`corona`)} ${yellow(`--bar`)}		Print stats in ${yellow(`bar`)} charts
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)}	Print chart for ${cyan(`china`)}
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)} ${yellow(`--log`)}	Print ${yellow(`log`)} chart for ${cyan(`china`)}
+	  ${green(`corona`)} ${yellow(`--csv`)} ${cyan(`states`)}
 	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}	Print ${yellow(`sorted`)} data by ${cyan(`cases-today`)}
 	  ${green(`corona`)} ${yellow(`-s`)} ${cyan(`critical`)}		Print ${yellow(`sorted`)} data by ${cyan(`critical`)}
 
@@ -104,6 +106,10 @@ module.exports = meow(
 			danger: {
 				type: 'boolean',
 				default: false
+			},
+			csv: {
+				type: 'boolean',
+				default: false,
 			}
 		}
 	}

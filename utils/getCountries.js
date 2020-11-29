@@ -12,7 +12,7 @@ module.exports = async (
 	output,
 	states,
 	countryName,
-	{ sortBy, limit, reverse, bar, json, continent, danger }
+	{ sortBy, limit, reverse, bar, json, continent, danger}
 ) => {
 	if (!countryName && !states && !bar && !continent && !danger) {
 		sortValidation(sortBy, spinner);
@@ -57,6 +57,8 @@ module.exports = async (
 		if (!json) {
 			spinner.info(`${cyan(`Sorted by:`)} ${sortBy}${isRev}`);
 		}
+
+		
 		console.log(output.toString());
 	}
 };
