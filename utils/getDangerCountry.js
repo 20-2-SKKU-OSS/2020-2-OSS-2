@@ -15,6 +15,7 @@ module.exports = async (
 	{ sortBy, limit, reverse, bar, json, continent, danger }
 ) => {
 	if (!countryName && !states && !bar && !continent && danger) {
+        sortBy = "per-million";
 		sortValidation(sortBy, spinner);
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/v2/countries`)
@@ -49,7 +50,7 @@ module.exports = async (
 		// Push selected data.
 		allCountries.map((oneCountry, count) => {
 
-            if (oneCountry.casesPerOneMillion > worldper * 3){
+            if ((realCount < 20) || (oneCountry.casesPerOneMillion > worldper * 3)){
                 realCount++;
                 output.push([
                     realCount,
