@@ -7,7 +7,7 @@ const transformName = require('./transformName.js');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 module.exports = async (spinner, table, states, countryList, options) => {
-	if (countryList && !states && !options.chart && !options.continent && !options.danger) {
+	if (countryList && !states && !options.chart && !options.continent && !options.danger && !options.news) {
 
 		var countries_data = []
 

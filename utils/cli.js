@@ -23,6 +23,7 @@ module.exports = meow(
 	  ${yellow(`--continent`)}                  Print continental data
 	  ${yellow(`--danger`)}                     Print dangerous countries
 	  ${yellow(`--csv`)}                        CSV-file export
+	  ${yellow(`--news`)}                       Print corona news
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}		Print data of ${cyan(`china`)}
@@ -110,7 +111,11 @@ module.exports = meow(
 			csv: {
 				type: 'boolean',
 				default: false,
-			}
+			},
+			news: {
+				type: 'boolean',
+				default: false,
+			}			
 		}
 	}
 );
