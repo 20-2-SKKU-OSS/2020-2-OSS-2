@@ -12,7 +12,7 @@ module.exports = async (
 	output,
 	states,
 	countryName,
-	{ sortBy, reverse, bar, json, continent }
+	{ sortBy, reverse, bar, json, continent, csv }
 ) => {
 	if (!countryName && !states && !bar && continent) {
 		sortValidation(sortBy, spinner);
@@ -54,6 +54,33 @@ module.exports = async (
 		if (!json) {
 			spinner.info(`${cyan(`Sorted by:`)} ${sortBy}${isRev}`);
 		}
+
+		if(csv){
+			var fs=require('fs');
+
+			if (!fs.existsSync('./output')){
+				fs.mkdirSync('./output');
+			}
+			
+
+			const csvWriter = createCsvWriter({
+				path: 'output/continents.csv',
+				header: [
+				{id: 'continent', title: 'Continent'},
+				{id: 'cases', title: 'Cases'},
+				{id: 'todayCases', title: 'Cases (today)'},
+				{id: 'deaths', title: 'Deaths'},
+				{id: 'todayDeaths', title: 'Deaths (today)'},
+				{id: 'recovered', title: 'Recovered'},
+				{id: 'active', title: 'Active'}
+				]
+			});
+
+			csvWriter.writeRecords(allContinents);
+
+
+		}
+		
 		console.log(output.toString());
 	}
 };

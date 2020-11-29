@@ -45,8 +45,9 @@ const minimal = cli.flags.minimal;
 const json = cli.flags.json;
 const continent = cli.flags.continent;
 const danger = cli.flags.danger;
+const csv = cli.flags.csv;
 
-const options = { sortBy, limit, reverse, minimal, chart, log, json, bar, continent, danger };
+const options = { sortBy, limit, reverse, minimal, chart, log, json, bar, continent, danger, csv };
 
 (async () => {
 	// Init.

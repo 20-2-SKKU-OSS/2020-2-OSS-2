@@ -12,9 +12,9 @@ module.exports = async (
 	output,
 	states,
 	countryName,
-	{ sortBy, limit, reverse, bar, json, continent, danger }
+	{ sortBy, limit, reverse, bar, json, continent, danger, csv}
 ) => {
-	if (!countryName && !states && !bar && !continent && !danger) {
+	if (!countryName && !states && !bar && !continent && !danger&& !csv) {
 		sortValidation(sortBy, spinner);
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/v2/countries`)
@@ -57,6 +57,8 @@ module.exports = async (
 		if (!json) {
 			spinner.info(`${cyan(`Sorted by:`)} ${sortBy}${isRev}`);
 		}
+
+		
 		console.log(output.toString());
 	}
 };

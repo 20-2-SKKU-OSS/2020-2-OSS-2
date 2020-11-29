@@ -8,6 +8,9 @@ const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 module.exports = async (spinner, table, states, countryList, options) => {
 	if (countryList && !states && !options.chart && !options.continent && !options.danger) {
+
+		var countries_data = []
+
 		for(let i=0;i<countryList.length;++i){
 			countryList[i] = await transformName(countryList[i]);
 			const [err, response] = await to(
@@ -34,50 +37,54 @@ module.exports = async (spinner, table, states, countryList, options) => {
 				format(thisCountry.casesPerOneMillion)
 			]);
 	
-			if(countryList.length==1){
-				var fs=require('fs');
-
-				if (!fs.existsSync('./output')){
-					fs.mkdirSync('./output');
+			var data=[
+				{
+					countryName: thisCountry.country,
+					cases: thisCountry.cases,
+					todayCases: thisCountry.todayCases,
+					deaths: thisCountry.deaths,
+					todayDeaths: thisCountry.todayDeaths,
+					recovered: thisCountry.recovered,
+					active: thisCountry.active,
+					critical: thisCountry.critical,
+					casesPerOneMillion: thisCountry.casesPerOneMillion
 				}
+			]
 
-				
-				var path_ =  'output/'+thisCountry.country+'.csv';
-				
-				const csvWriter = createCsvWriter({
-					path: path_,
-					header: [
-					  {id: 'cases', title: 'Cases'},
-					  {id: 'todayCases', title: 'TodayCases'},
-					  {id: 'deaths', title: 'Deaths'},
-					  {id: 'todayDeaths', title: 'Deaths (today)'},
-					  {id: 'recovered', title: 'Recovered'},
-					  {id: 'active', title: 'Active'},
-					  {id: 'critical', title: 'Critical'},
-					  {id: 'casesPerOneMillion', title: 'CasesPerOneMillion'},
-					]
-				});
-				
-				const data=[
-					{
-						cases: thisCountry.cases,
-						todayCases: thisCountry.todayCases,
-						deaths: thisCountry.deaths,
-						todayDeaths: thisCountry.todayDeaths,
-						recovered: thisCountry.recovered,
-						active: thisCountry.active,
-						critical: thisCountry.critical,
-						casesPerOneMillion: thisCountry.casesPerOneMillion
-					}
-				]
-
-				csvWriter.writeRecords(data);
-			}
+			countries_data.push(data[0]);
 		
 			if(i==countryList.length-1){
 				spinner.stopAndPersist();
 				console.log(table.toString());
 			}
 		}
+
+		if(options.csv){
+			var fs=require('fs');
+
+			if (!fs.existsSync('./output')){
+				fs.mkdirSync('./output');
+			}
+
+			var path_ =  'output/country.csv';
+				
+			const csvWriter = createCsvWriter({
+				path: path_,
+				header: [
+				  {id: 'countryName', title: 'CountryName'},
+				  {id: 'cases', title: 'Cases'},
+				  {id: 'todayCases', title: 'TodayCases'},
+				  {id: 'deaths', title: 'Deaths'},
+				  {id: 'todayDeaths', title: 'Deaths (today)'},
+				  {id: 'recovered', title: 'Recovered'},
+				  {id: 'active', title: 'Active'},
+				  {id: 'critical', title: 'Critical'},
+				  {id: 'casesPerOneMillion', title: 'CasesPerOneMillion'},
+				]
+			});
+			
+			csvWriter.writeRecords(countries_data);
+		}
+
 	}
 };
