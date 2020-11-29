@@ -20,7 +20,7 @@ module.exports = meow(
 	  ${yellow(`-x`)}, ${yellow(`--xcolor`)}    Single colored output
 	  ${yellow(`-m`)}, ${yellow(`--minimal`)}   Minimalistic CLI output
 	  ${yellow(`-j`)}, ${yellow(`--json`)}      Output JSON only data
-	  ${yellow(`--continent`)}     Print chart for a country
+	  ${yellow(`--continent`)}     Print continental data
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}		Print data of ${cyan(`china`)}
