@@ -21,6 +21,7 @@ const getBar = require('./utils/getBar.js');
 const getWorldwide = require('./utils/getWorldwide.js');
 const getCountries = require('./utils/getCountries.js');
 const getContinents = require('./utils/getContinents.js');
+const getDangerCountry = require('./utils/getDangerCountry.js');
 
 const {
 	style,
@@ -43,7 +44,9 @@ const bar = cli.flags.bar;
 const minimal = cli.flags.minimal;
 const json = cli.flags.json;
 const continent = cli.flags.continent;
-const options = { sortBy, limit, reverse, minimal, chart, log, json, bar, continent };
+const danger = cli.flags.danger;
+
+const options = { sortBy, limit, reverse, minimal, chart, log, json, bar, continent, danger };
 
 (async () => {
 	// Init.
@@ -71,6 +74,7 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar, contin
 	await getCountryChart(spinner, countryList[0], options);
 	await getBar(spinner, countryList[0], states, options);
 	await getContinents(spinner, output, states, countryList[0], options);
+	await getDangerCountry(spinner, output, states, countryList[0], options);
 
 	theEnd(lastUpdated, states, minimal || json);
 })();

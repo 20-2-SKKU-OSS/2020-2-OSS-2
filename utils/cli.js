@@ -21,6 +21,7 @@ module.exports = meow(
 	  ${yellow(`-m`)}, ${yellow(`--minimal`)}   Minimalistic CLI output
 	  ${yellow(`-j`)}, ${yellow(`--json`)}      Output JSON only data
 	  ${yellow(`--continent`)}     Print continental data
+	  ${yellow(`--danger`)}     Print dangerous countries
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}		Print data of ${cyan(`china`)}
@@ -99,6 +100,10 @@ module.exports = meow(
 				type: 'boolean',
 				default: false
 				// alias: 'b'
+			},
+			danger: {
+				type: 'boolean',
+				default: false
 			}
 		}
 	}
