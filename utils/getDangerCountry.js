@@ -42,7 +42,7 @@ module.exports = async (
 
 		//get month_data
         const [err3, response3] = await to(
-            axios.get(`https://corona.lmao.ninja/v2/historical`)
+            axios.get(`https://corona.lmao.ninja/v2/historical/`)
         );
         handleError(`API is down, try again later.`, err3, false);
 		if (response3.status === 404) {
