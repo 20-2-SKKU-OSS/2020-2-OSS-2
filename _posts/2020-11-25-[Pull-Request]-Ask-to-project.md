@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[UPDATE] CSV export 나라별"
+title: "[UPDATE] 기존 프로젝트에 풀리퀘스트 요청"
 tags: [corona-cli, Archive, UPDATE]
 excerpt_separator: <!--more-->
 author: jyt
