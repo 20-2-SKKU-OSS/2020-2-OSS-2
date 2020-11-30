@@ -21,7 +21,7 @@ module.exports = meow(
 	  ${yellow(`-m`)}, ${yellow(`--minimal`)}   Minimalistic CLI output
 	  ${yellow(`-j`)}, ${yellow(`--json`)}      Output JSON only data
 	  ${yellow(`--continent`)}                  Print continental data
-	  ${yellow(`--danger`)}                     Print dangerous countries
+	  ${yellow(`--danger`)}                     Print dangerous countries referring to CDC Health Notice Level
 	  ${yellow(`--csv`)}                        CSV-file export
 	  ${yellow(`--news`)}                       Print corona news
 
