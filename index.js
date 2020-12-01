@@ -78,7 +78,7 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar, contin
 	await getBar(spinner, countryList[0], states, options);
 	await getContinents(spinner, output, states, countryList[0], options);
 	await getDangerCountry(spinner, output, states, countryList[0], options);
-	await getnews(spinner,options);
+	await getnews(spinner, options);
 
 	theEnd(lastUpdated, states, minimal || json);
 })();

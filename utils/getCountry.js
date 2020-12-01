@@ -49,15 +49,13 @@ module.exports = async (spinner, table, states, countryList, options) => {
 					critical: thisCountry.critical,
 					casesPerOneMillion: thisCountry.casesPerOneMillion
 				}
-			]
+			];
 
 			countries_data.push(data[0]);
 		
-			if(i==countryList.length-1){
-				spinner.stopAndPersist();
-				console.log(table.toString());
-			}
 		}
+		spinner.stopAndPersist();
+		console.log(table.toString());
 
 		if(options.csv){
 			var fs=require('fs');
