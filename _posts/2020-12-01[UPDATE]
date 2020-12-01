@@ -9,7 +9,8 @@ feature-img:
 
 sort data 입력의 간편화 기능을 추가하였습니다
 
- 
+
+<!--more-->
 
 기존 corona-cli 프로젝트의 sort data기능 데이터 출력의 입력방식을 
 
