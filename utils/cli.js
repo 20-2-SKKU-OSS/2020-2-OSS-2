@@ -37,14 +37,14 @@ module.exports = meow(
 
 	Sort Key
 	  ${yellow(`Country`)}: Name of the country
-	  ${yellow(`Cases`)}: Total number of cases in a country
-	  ${yellow(`Cases (today)`)}: Cases in 24 hours GMT/UTC
-	  ${yellow(`Deaths`)}: Total number of deaths in a country
-	  ${yellow(`Deaths (today)`)}: Deaths in 24 hours GMT/UTC
-	  ${yellow(`Recovered`)}: Total number of recovered patients
-	  ${yellow(`Active`)}: Total number of active patients
-	  ${yellow(`Critical`)}: Total number of critical patients
-	  ${yellow(`Per Million`)}: Affected patients per million
+	  ${yellow(`Cases or Ca`)}: Total number of cases in a country
+	  ${yellow(`Cases (today) or Ca-t`)}: Cases in 24 hours GMT/UTC
+	  ${yellow(`Deaths or D`)}: Total number of deaths in a country
+	  ${yellow(`Deaths (today) or D-t`)}: Deaths in 24 hours GMT/UTC
+	  ${yellow(`Recovered or R`)}: Total number of recovered patients
+	  ${yellow(`Active or A`)}: Total number of active patients
+	  ${yellow(`Critical or C`)}: Total number of critical patients
+	  ${yellow(`Per Million or P-m`)}: Affected patients per million
 
 	❯ You can also run command + option at once:
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`-x`)} ${yellow(`-s cases`)}
