@@ -8,7 +8,7 @@ module.exports = async (spinner, { news }) => {
 
     if (news) {
 
-        const datas = await axios.get("https://www.bbc.com/news/coronavirus")
+        await axios.get("https://www.bbc.com/news/coronavirus")
             .then(html => {
                 let ulList = [];
                 const $ = cheerio.load(html.data);
@@ -16,7 +16,7 @@ module.exports = async (spinner, { news }) => {
 
                 $bodyList.each(function (i, elem) {
                     ulList[i] = {
-                        title: $(this).find("span.lx-stream-post__header-text.gs-u-align-middle").text().replace("'", ""),
+                        title: $(this).find("span.lx-stream-post__header-text.gs-u-align-middle").text(),
                         url: 'www.bbc.com' + $(this).find('a.qa-heading-link.lx-stream-post__header-link').attr('href')
                     };
 
