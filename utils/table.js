@@ -94,9 +94,12 @@ module.exports = {
 		cases: 'cases',
 		ca: 'cases',
 		'cases-today': 'todayCases',
+		'ca-t':'todayCases',
 		d: 'deaths',
 		deaths: 'deaths',
 		'deaths-today': 'todayDeaths',
+		'd-t':'todayDeaths',
+		a:'active',
 		active: 'active'
 	}
 };

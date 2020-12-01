@@ -8,11 +8,11 @@ module.exports = (sortBy, spinner) => {
 			spinner.stop();
 			console.log(`${sym.error} ${red(`Wrong sorting key!`)}`);
 			console.log(`${sym.info} You can only sort states data by:
-${dim(`-`)} ${green(`cases`)}
-${dim(`-`)} ${green(`cases-today`)}
-${dim(`-`)} ${green(`deaths`)}
-${dim(`-`)} ${green(`deaths-today`)}
-${dim(`-`)} ${green(`active`)}\n`);
+${dim(`-`)} ${green(`cases or ca`)}
+${dim(`-`)} ${green(`cases-today or ca-t`)}
+${dim(`-`)} ${green(`deaths or d`)}
+${dim(`-`)} ${green(`deaths-today or d-t`)}
+${dim(`-`)} ${green(`active or a`)}\n`);
 			process.exit(0);
 		}
 		// It is a custom sort.
