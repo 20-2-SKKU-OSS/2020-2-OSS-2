@@ -11,6 +11,7 @@ const ora = require('ora');
 const Table = require('cli-table3');
 const JsonOutput = require('./utils/JsonOutput.js');
 const cli = require('./utils/cli.js');
+const cliKor = require('./utils/cliKor.js');
 const init = require('./utils/init.js');
 const theEnd = require('./utils/theEnd.js');
 const handleError = require('cli-handle-error');
@@ -55,6 +56,7 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar, contin
 	// Init.
 	await init(minimal || json);
 	const spinner = ora({ text: '' });
+	input[0] === '[kor]help' && (await cliKor.showHelp(0));
 	input[0] === 'help' && (await cli.showHelp(0));
 	const states = input[0] === 'states' ? true : false;
 	const countryList = (states ? '' : input);
