@@ -68,9 +68,17 @@ module.exports = async (
 		// Better colors.
 		const getColors = {
 			cases: 'cyan',
+			ca:'cyan',
+			r:'green',
 			'cases-today': 'cyan',
+			'ca-t':'cyan',
+			d:'red',
 			deaths: 'red',
 			'deaths-today': 'red',
+			'd-t':'red',
+			a:'yellow',
+			c:'red',
+			'p-m':'cyan',
 			recovered: 'green',
 			active: 'yellow',
 			critical: 'red',
