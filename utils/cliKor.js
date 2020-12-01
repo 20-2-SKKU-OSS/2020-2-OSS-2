@@ -33,14 +33,14 @@ module.exports = meow(
 	  ${green(`corona`)} ${yellow(`-s`)} ${yellow(`-l4`)} ${cyan(`critical`)}	${cyan(`중증환자`)}로 ${yellow(`정렬`)}해서 ${yellow(`네개의`)} 데이터를 출력
 	Sort Key
 	  ${yellow(`Country`)}: 국가명
-	  ${yellow(`Cases`)}: 총확진자
-	  ${yellow(`Cases (today)`)}: 24시간 내에 발생한 환자
-	  ${yellow(`Deaths`)}: 총 사망자
-	  ${yellow(`Deaths (today)`)}: 24시간 내에 발생한 확진자
-	  ${yellow(`Recovered`)}: 총완치자
-	  ${yellow(`Active`)}: 실질확진자
-	  ${yellow(`Critical`)}: 총중증환자
-	  ${yellow(`Per Million`)}: 인구 100만명당 확진자
+	  ${yellow(`Cases or Ca`)}: 총확진자
+	  ${yellow(`Cases (today) or Ca-t`)}: 24시간 내에 발생한 환자
+	  ${yellow(`Deaths or D`)}: 총 사망자
+	  ${yellow(`Deaths (today) or D-t`)}: 24시간 내에 발생한 확진자
+	  ${yellow(`Recovered or R`)}: 총완치자
+	  ${yellow(`Active or A`)}: 실질확진자
+	  ${yellow(`Critical or C`)}: 총중증환자
+	  ${yellow(`Per Million or P-m`)}: 인구 100만명당 확진자
 	❯ 명령 + 옵션도 한 번에 수행할 수 있다:
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`-x`)} ${yellow(`-s cases`)}
 `,
