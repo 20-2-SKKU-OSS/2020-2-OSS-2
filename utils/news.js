@@ -8,7 +8,7 @@ module.exports = async (spinner, { news }) => {
 
     if (news) {
 
-        const datas = await axios.get("https://www.bbc.com/news/coronavirus")
+        await axios.get("https://www.bbc.com/news/coronavirus")
             .then(html => {
                 let ulList = [];
                 const $ = cheerio.load(html.data);
@@ -16,7 +16,7 @@ module.exports = async (spinner, { news }) => {
 
                 $bodyList.each(function (i, elem) {
                     ulList[i] = {
-                        title: $(this).find("span.lx-stream-post__header-text.gs-u-align-middle").text().replace("'", ""),
+                        title: $(this).find("span.lx-stream-post__header-text.gs-u-align-middle").text(),
                         url: 'www.bbc.com' + $(this).find('a.qa-heading-link.lx-stream-post__header-link').attr('href')
                     };
 
@@ -27,6 +27,7 @@ module.exports = async (spinner, { news }) => {
                 const newsTable = require('cli-table3');
                 var table = new newsTable();
                 for (let i = 0; i < data.length; ++i) {
+                    if(data[i].url != "www.bbc.comundefined")
                     table.push(
                         [{ rowSpan: 2, content: i + 1, vAlign: 'center' }, data[i].title],
                         [green(data[i].url)]
