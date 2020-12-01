@@ -27,6 +27,7 @@ module.exports = async (spinner, { news }) => {
                 const newsTable = require('cli-table3');
                 var table = new newsTable();
                 for (let i = 0; i < data.length; ++i) {
+                    if(data[i].url != "www.bbc.comundefined")
                     table.push(
                         [{ rowSpan: 2, content: i + 1, vAlign: 'center' }, data[i].title],
                         [green(data[i].url)]
