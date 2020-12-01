@@ -33,7 +33,7 @@ module.exports = meow(
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)} ${yellow(`--log`)}	Print ${yellow(`log`)} chart for ${cyan(`china`)}
 	  ${green(`corona`)} ${yellow(`--csv`)} ${cyan(`states`)}         Extract ${cyan(`states`)} data to ${yellow(`csv`)}
 	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}	Print ${yellow(`sorted`)} data by ${cyan(`cases-today`)}
-	  ${green(`corona`)} ${yellow(`-s`)} ${cyan(`critical`)}		Print ${yellow(`sorted`)} data by ${cyan(`critical`)}
+	  ${green(`corona`)} ${yellow(`-s`)} ${yellow(`-l4`)} ${cyan(`critical`)}	Print ${yellow(`four sorted`)} data by ${cyan(`critical`)}
 
 	Sort Key
 	  ${yellow(`Country`)}: Name of the country
