@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[UPDATE] Sort data 입력 간편화"
+title: "[UPDATE] Sort data 에러 message 수정"
 tags: [corona-cli, Archive, UPDATE]
 excerpt_separator: <!--more-->
 author: jjy
