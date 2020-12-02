@@ -10,9 +10,8 @@ const orderBy = require('lodash.orderby');
 const sortValidation = require('./sortValidation.js');
 
 module.exports = async (spinner, table, states, countryList, options) => {
-	if (countryList && !states && !options.chart && !options.continent && !options.danger && !options.news) {
+	if (countryList[0] && !states && !options.chart && !options.continent && !options.danger && !options.news) {
 		sortValidation(options.sortBy, spinner);
-
 		var countries_data = []
 
 		for(let i=0;i<countryList.length;++i){
