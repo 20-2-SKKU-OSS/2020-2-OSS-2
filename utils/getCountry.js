@@ -5,10 +5,13 @@ const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 const transformName = require('./transformName.js');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
+const { sortingKeys } = require('./table.js');
+const orderBy = require('lodash.orderby');
+const sortValidation = require('./sortValidation.js');
 
 module.exports = async (spinner, table, states, countryList, options) => {
-	if (countryList && !states && !options.chart && !options.continent && !options.danger && !options.news) {
-
+	if (countryList[0] && !states && !options.chart && !options.continent && !options.danger && !options.news) {
+		sortValidation(options.sortBy, spinner);
 		var countries_data = []
 
 		for(let i=0;i<countryList.length;++i){
@@ -21,23 +24,7 @@ module.exports = async (spinner, table, states, countryList, options) => {
 			handleError(`API is down, try again later.`, err, false);
 			const thisCountry = response.data;
 
-			// Format.
-			const format = numberFormat(options.json);
-
-			table.push([
-				i+1,
-				thisCountry.country,
-				format(thisCountry.cases),
-				format(thisCountry.todayCases),
-				format(thisCountry.deaths),
-				format(thisCountry.todayDeaths),
-				format(thisCountry.recovered),
-				format(thisCountry.active),
-				format(thisCountry.critical),
-				format(thisCountry.casesPerOneMillion)
-			]);
-	
-			var data=[
+			var data=
 				{
 					countryName: thisCountry.country,
 					cases: thisCountry.cases,
@@ -48,12 +35,36 @@ module.exports = async (spinner, table, states, countryList, options) => {
 					active: thisCountry.active,
 					critical: thisCountry.critical,
 					casesPerOneMillion: thisCountry.casesPerOneMillion
-				}
-			];
-
-			countries_data.push(data[0]);
-		
+				};
+			countries_data.push(data);			
 		}
+		
+		// Sort & reverse.
+		const direction = options.reverse ? 'asc' : 'desc';
+		countries_data = orderBy(
+			countries_data,
+			[sortingKeys[options.sortBy]],
+			[direction]
+		);
+
+		// Format.
+		const format = numberFormat(options.json);
+
+		countries_data.map((oneCountry, count) => {
+			table.push([
+				count + 1,
+				oneCountry.countryName,
+				format(oneCountry.cases),
+				format(oneCountry.todayCases),
+				format(oneCountry.deaths),
+				format(oneCountry.todayDeaths),
+				format(oneCountry.recovered),
+				format(oneCountry.active),
+				format(oneCountry.critical),
+				format(oneCountry.casesPerOneMillion)
+			]);
+		});
+
 		spinner.stopAndPersist();
 		console.log(table.toString());
 
