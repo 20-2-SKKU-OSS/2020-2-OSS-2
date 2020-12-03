@@ -3,7 +3,7 @@ layout: post
 title: "[UPDATE] Corona help 수정을 통한 접근성 향상"
 tags: [corona-cli, Corona help, UPDATE]
 excerpt_separator: <!--more-->
-author: Wonchul-Shin
+author: swc
 feature-img: 
 ---
 corona help를 편집해 처음 프로그램을 접하는 이용자도 빠르게 프로그램을 사용할 수 있도록 했습니다. 
