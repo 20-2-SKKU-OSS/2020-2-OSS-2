@@ -13,7 +13,7 @@ feature-img:
 
 (기존에 존재하던 issue)
 
-## From : issue [#103](https://github.com/ahmadawais/corona-cli/pull/103)
+## From : [issue#103](https://github.com/ahmadawais/corona-cli/pull/103)
 
 다음 내용에 따르면 어떤 개발자가 csv-export 기능을 추가하여 풀리퀘스트를 요청하였지만,
 사용자들이 코드 리뷰를 하면서 output폴더가 존재하지 않으면 에러가 발생함을 확인 하였습니다.
@@ -26,4 +26,4 @@ feature-img:
 
 그리고 개선된 코드를 저희가 참여하고자 하는 프로젝트에 기여하고자, 풀리퀘스트 요청을 드렸습니다.
 
-## Link : Pull-request [#113](https://github.com/ahmadawais/corona-cli/pull/113)
+## Link : [Pull-request#113](https://github.com/ahmadawais/corona-cli/pull/113)
