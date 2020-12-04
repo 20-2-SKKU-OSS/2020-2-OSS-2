@@ -11,7 +11,7 @@ feature-img:
 
 <!--more-->
 
-(기존에 존재하던 issue)
+![jyt_13.png](/2020-2-OSS-2/assets/img/jyt_13.png)
 
 ## From : issue [#98](https://github.com/ahmadawais/corona-cli/pull/98)
 
@@ -19,15 +19,19 @@ feature-img:
 csv-export 기능을 추가하였지만 실제로 코드를 보면 옵션을 주어 선택하는 것이 아닌
 원하든 원하지 않든 무조건 csv-export가 실행되도록 만들어 두었습니다.
 
-(프로젝트 내 issue 및 해결)
+![jyt_14.png](/2020-2-OSS-2/assets/img/jyt_14.png)
+
+![jyt_15.png](/2020-2-OSS-2/assets/img/jyt_15.png)
 
 그래서 이 문제를 저희 프로젝트 이슈란에 등록하고 문제를 해결해 보았습니다.
 
-(풀리 이미지)
+![jyt_05.png](/2020-2-OSS-2/assets/img/jyt_05.png)
+
+![jyt_16.png](/2020-2-OSS-2/assets/img/jyt_16.png)
 
 그리고 개선된 코드를 저희의 프로젝트에, 풀리퀘스트 요청을 하고
 
-(코드 리뷰)
+![jyt_07.png](/2020-2-OSS-2/assets/img/jyt_07.png)
 
 코드리뷰 과정을 거친 후 정상적으로 풀리퀘스트를 마쳤습니다.
 
