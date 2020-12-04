@@ -20,19 +20,21 @@ module.exports = meow(
 	  ${yellow(`-x`)}, ${yellow(`--xcolor`)}    Single colored output
 	  ${yellow(`-m`)}, ${yellow(`--minimal`)}   Minimalistic CLI output
 	  ${yellow(`-j`)}, ${yellow(`--json`)}      Output JSON only data
-	  ${yellow(`--continent`)}     Print continental data
-	  ${yellow(`--danger`)}        Print dangerous countries referring to CDC Health Notice Level
-	  ${yellow(`--csv`)}           CSV-file export
-	  ${yellow(`--news`)}          Print corona news
+	  ${yellow(`--continent`)}     		    Print continental data
+	  ${yellow(`--danger`)}        		    Print dangerous countries referring to CDC Health Notice Level
+	  ${yellow(`--csv`)}           		    CSV-file export
+	  ${yellow(`--news`)}          	     	    Print corona news
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}		Print data of ${cyan(`china`)}
 	  ${green(`corona`)} ${cyan(`states`)}		Print data of all ${cyan(`states`)}
 	  ${green(`corona`)} ${yellow(`--bar`)}		Print stats in ${yellow(`bar`)} charts
-	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)}	Print chart for ${cyan(`china`)}
+	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)}			Print chart for ${cyan(`china`)}
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)} ${yellow(`--log`)}	Print ${yellow(`log`)} chart for ${cyan(`china`)}
-	  ${green(`corona`)} ${yellow(`--csv`)} ${cyan(`states`)}         Extract ${cyan(`states`)} data to ${yellow(`csv`)}
-	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}	Print ${yellow(`sorted`)} data by ${cyan(`cases-today`)}
+	  ${green(`corona`)} ${yellow(`--csv`)} ${cyan(`states`)}         		Extract ${cyan(`states`)} data to ${yellow(`csv`)} 
+	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}			Print ${yellow(`sorted`)} data by ${cyan(`cases-today`)}
+	  ${green(`corona`)} ${yellow(`--csv`)} ${yellow(`-s`)} ${cyan(`deaths`)} ${cyan(`korea china japan`)}
+											Print ${yellow(`sorted`)} data by ${cyan(`deaths`)} of ${cyan(`korea china japan`)}
 	  ${green(`corona`)} ${yellow(`-s`)} ${yellow(`-l4`)} ${cyan(`critical`)}	Print ${yellow(`four sorted`)} data by ${cyan(`critical`)}
 
 	Sort Key
