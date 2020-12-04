@@ -11,7 +11,7 @@ feature-img:
 
 <!--more-->
 
-![jyt_03.png](/2020-2-OSS-2/assets/img/jyt_03.png)
+![jyt_03.png](https://github.com/20-2-SKKU-OSS/2020-2-OSS-2/blob/page/assets/img/jyt_03.png)
 
 ## From : issue [#12](https://github.com/20-2-SKKU-OSS/2020-2-OSS-2/issues/12)
 
