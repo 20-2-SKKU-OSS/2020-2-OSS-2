@@ -25,4 +25,4 @@ feature-img:
 
 코드리뷰 과정을 거친 후 정상적으로 풀리퀘스트를 마쳤습니다.
 
-## Link : Pull-request [#29](https://github.com/20-2-SKKU-OSS/2020-2-OSS-2/pull/29)
+## Link : [Pull-request#29](https://github.com/20-2-SKKU-OSS/2020-2-OSS-2/pull/29)
