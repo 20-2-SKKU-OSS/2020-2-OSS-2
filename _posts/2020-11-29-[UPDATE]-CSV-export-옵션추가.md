@@ -13,7 +13,7 @@ feature-img:
 
 ![jyt_13.png](/2020-2-OSS-2/assets/img/jyt_13.png)
 
-## From : issue [#98](https://github.com/ahmadawais/corona-cli/pull/98)
+## From : [issue#98](https://github.com/ahmadawais/corona-cli/pull/98)
 
 다음 내용에 따르면 어떤 개발자가 csv-export 기능을 추가하면 좋겠다라는 생각에
 csv-export 기능을 추가하였지만 실제로 코드를 보면 옵션을 주어 선택하는 것이 아닌
@@ -35,4 +35,4 @@ csv-export 기능을 추가하였지만 실제로 코드를 보면 옵션을 주
 
 코드리뷰 과정을 거친 후 정상적으로 풀리퀘스트를 마쳤습니다.
 
-## Link : Pull-request [#29](https://github.com/20-2-SKKU-OSS/2020-2-OSS-2/pull/29)
+## Link : [Pull-request#29](https://github.com/20-2-SKKU-OSS/2020-2-OSS-2/pull/29)
