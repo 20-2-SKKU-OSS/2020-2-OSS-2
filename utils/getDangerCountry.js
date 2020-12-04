@@ -7,6 +7,13 @@ const handleError = require('cli-handle-error');
 const orderBy = require('lodash.orderby');
 const sortValidation = require('./sortValidation.js');
 
+/*
+The indicators of dangerous countries referenced the following:
+
+	Incidence Rate Ranges for COVID-19 Travel Health Notice Levels Destinations, LEVEL 4 VERY HIGH
+	Cases per 100,000 people over past 28 days More than 100
+	link : https://www.cdc.gov/coronavirus/2019-ncov/travelers/how-level-is-determined.html
+*/
 module.exports = async (
 	spinner,
 	output,
@@ -55,6 +62,19 @@ module.exports = async (
 			process.exit(0);
 		}
 
+/*
+How to calculate indicator(Cases per 100,000 people over past 28 days More than 100) in the code
+
+	1. The population of a specific country(con_pop) is calculated using the following formula
+		Country.cases/Country.casesPerOneMillion * 1000000
+		
+	2. The number of new cases in the last 28 days(month_case) is obtained through "corona.lmao.ninja/v2/historical/" as follows
+		cases[Latest date] - cases[Oldest date (28 days ago)]
+
+	3. Cases per 100,000 people over past 28 days More than 100 is calculated as follows
+		The number of new cases(month_case) / The population of country(con_pop) * 100000
+
+*/
         let allData = response2.data;
         let worldper = allData.casesPerOneMillion;
         let realCount = 0;
