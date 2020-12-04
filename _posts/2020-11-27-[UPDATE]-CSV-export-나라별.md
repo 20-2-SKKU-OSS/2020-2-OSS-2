@@ -24,4 +24,4 @@ feature-img:
 
 ![jyt_12.png](/2020-2-OSS-2/assets/img/jyt_12.png)
 
-## Link : Pull-request [#29](https://github.com/20-2-SKKU-OSS/2020-2-OSS-2/pull/29)
+## Link : [Pull-request#29](https://github.com/20-2-SKKU-OSS/2020-2-OSS-2/pull/29)
