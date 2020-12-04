@@ -13,7 +13,7 @@ feature-img:
 
 ![jyt_03.png](/2020-2-OSS-2/assets/img/jyt_03.png)
 
-## From : issue [#12](https://github.com/20-2-SKKU-OSS/2020-2-OSS-2/issues/12)
+## From : [issue#12](https://github.com/20-2-SKKU-OSS/2020-2-OSS-2/issues/12)
 
 기존에는 한개의 나라만 검색이 가능했고, 그에 따라 한개의 나라에 대해서만 csv 추출이 가능했었는데,
 
@@ -33,4 +33,4 @@ feature-img:
 
 ![jyt_07.png](/2020-2-OSS-2/assets/img/jyt_07.png)
 
-## Link : Pull-request [#29](https://github.com/20-2-SKKU-OSS/2020-2-OSS-2/pull/29)
+## Link : [Pull-request#29](https://github.com/20-2-SKKU-OSS/2020-2-OSS-2/pull/29)
