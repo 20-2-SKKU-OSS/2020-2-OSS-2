@@ -15,6 +15,7 @@ module.exports = async (spinner, table, states, countryList, options) => {
 		var countries_data = []
 
 		for(let i=0;i<countryList.length;++i){
+			//Country name is transformed into standards for a comprehensive search.
 			countryList[i] = await transformName(countryList[i]);
 			const [err, response] = await to(
 				axios.get(`https://corona.lmao.ninja/v2/countries/${countryList[i]}`)
