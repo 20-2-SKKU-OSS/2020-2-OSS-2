@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "[UPDATE] CSV export 다중국가&대륙별"
+title: "[UPDATE] CSV export 다중국가 "
 tags: [corona-cli, Archive, UPDATE]
 excerpt_separator: <!--more-->
 author: jyt
 feature-img: 
 ---
 
-다중국가에 대해서, 대륙별로 코로나 감염자 관련 정보를 csv파일로 추출하는 기능을 추가하였습니다.
+다중국가에 대해서 코로나 감염자 관련 정보를 csv파일로 추출하는 기능이 오류가생겨 이를 해결하였습니다.
 
 <!--more-->
 
