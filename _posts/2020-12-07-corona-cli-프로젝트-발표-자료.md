@@ -15,5 +15,5 @@ feature-img: "assets/img/corona-cli-logo.jpg"
 
 <https://20-2-skku-oss.github.io/2020-2-OSS-2/assets/2조%20ppt.pptx>
 
-Github link: <https://github.com/ahmadawais/corona-cli>  
+Github link: <https://github.com/20-2-SKKU-OSS/2020-2-OSS-2/>  
 
