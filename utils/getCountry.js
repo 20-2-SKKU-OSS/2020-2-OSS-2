@@ -1,4 +1,5 @@
 const axios = require('axios');
+const { cyan } = require('chalk');
 const numberFormat = require('./numberFormat');
 const exitCountry = require('./exitCountry');
 const to = require('await-to-js').default;
@@ -67,6 +68,12 @@ module.exports = async (spinner, table, states, countryList, options) => {
 		});
 
 		spinner.stopAndPersist();
+		if(countries_data.length>1){
+			const isRev = options.reverse ? `${dim(` & `)}${cyan(`Order`)}: reversed` : ``;
+			if (!options.json) {
+				spinner.info(`${cyan(`Sorted by:`)} ${options.sortBy}${isRev}`);
+			}
+		}
 		console.log(table.toString());
 
 		if(options.csv){
